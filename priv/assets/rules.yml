@@ -1,0 +1,13 @@
+discount_rules:
+  - type: FreeRule
+    product_code: GR1
+    buy_quantity: 1
+    get_quantity: 1
+  - type: ReducedPriceRule
+    product_code: SR1
+    buy_quantity: 3
+    price_per_product: £4.50
+  - type: FractionPriceRule
+    product_code: CF1
+    buy_quantity: 2
+    fraction_price: 70%
