@@ -1,0 +1,34 @@
+{  "GreenTea": 
+    {
+    "code": "GR1",
+    "name": "Green Tea",
+    "price": 3.11,
+    "itemsInCart": 4,
+    "itemsAdded": 2,
+    "pricex4items": 6.22,
+    "pricex5items": 15.55
+    },
+
+    "Strawberries": 
+    {
+    "code": "SR1",
+    "name": "Strawberries",
+    "price": 5.00,
+    "pricex4items" : 18.00
+    },
+
+    "Coffee": 
+    {
+    "code": "CF1",
+    "name": "Coffee",
+    "price": 11.23,
+    "pricex3items":23.583
+    },  
+
+    "EarlGreyTea": 
+    {
+    "code": "EGT1",
+    "name": "Earl Grey Tea",
+    "price": "£2"
+    }
+}
