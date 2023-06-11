@@ -6,7 +6,8 @@
     "itemsInCart": 4,
     "itemsAdded": 2,
     "pricex4items": 6.22,
-    "pricex5items": 15.55
+    "pricex5items": 15.55,
+    "rule": "FreeRule"
     },
 
     "Strawberries": 
@@ -14,7 +15,9 @@
     "code": "SR1",
     "name": "Strawberries",
     "price": 5.00,
-    "pricex4items" : 18.00
+    "pricex4items" : 18.00,
+    "pricex6items": 27,
+    "rule": "ReducedPriceRule"
     },
 
     "Coffee": 
@@ -22,13 +25,17 @@
     "code": "CF1",
     "name": "Coffee",
     "price": 11.23,
-    "pricex3items":23.583
+    "pricex2items": 22.46,
+    "pricex3items": 23.583,
+    "pricex6items": 47.166,
+    "rule": "FractionPriceRule"
     },  
 
-    "EarlGreyTea": 
+    "NotExistingProduct": 
     {
     "code": "EGT1",
     "name": "Earl Grey Tea",
-    "price": "£2"
+    "price": "£2",
+    "rule": "notExisting"
     }
 }
