@@ -1,0 +1,274 @@
+{ "test_1":
+    { "GreenTea":
+       {
+        "code":"GR1",
+        "price": 3.11
+       },
+       "Strawberries":
+       {
+        "code":"SR1",
+        "price":5.00
+       },
+       "Coffee": 
+       {
+        "code": "CF1",
+        "price":11.23 
+       }
+    }, 
+
+    "test_2":
+    { "GreenTea":
+       {
+        "code":"GR1",
+        "price": 3.11,
+        "itemsInCart": 4,
+        "itemsAdded": 2,
+        "rule":"FreeRule"
+        }
+    }, 
+
+    "test_3":
+    { "GreenTea":
+       {
+        "code":"GR1",
+        "price": 3.11,
+        "itemsInCart": 10,
+        "itemsAdded": 5,
+        "rule":"FreeRule",
+        "pricex5items": 15.55
+       }
+    },
+
+    "test_4":
+    { "Strawberries":
+       {
+        "code":"SR1",
+        "price": 5.00,
+        "itemsInCart": 3,
+        "itemsAdded": 3,
+        "rule":"notRuleApplied"
+       }
+    },
+
+    "test_5":
+    { "Strawberries":
+       {
+        "code":"SR1",
+        "pricex4items": 18.00,
+        "itemsInCart": 4,
+        "itemsAdded": 4,
+        "rule":"ReducedPriceRule"
+       }
+    },
+
+    "test_6":
+    { "Strawberries":
+       {
+        "code":"SR1",
+        "pricex6items": 27.00,
+        "itemsInCart": 6,
+        "itemsAdded": 6,
+        "rule":"ReducedPriceRule"
+       }
+    },
+
+    "test_7":
+    { "Coffee":
+       {
+        "code":"CF1",
+        "price": 11.23,
+        "pricex2items": 22.46,
+        "itemsInCart": 2,
+        "itemsAdded": 2,
+        "rule":"notRuleApplied"
+       }
+    },
+
+    "test_8":
+    { "Coffee":
+       {
+        "code":"CF1",
+        "itemsInCart": 3,
+        "itemsAdded": 3,
+        "pricex3items": 23.583,
+        "rule":"FractionPriceRule"
+       }
+    },
+
+    "test_9":
+    { "Coffee":
+       {
+        "code":"CF1",
+        "itemsInCart": 6,
+        "itemsAdded": 6,
+        "pricex6items": 47.166,
+        "rule":"FractionPriceRule"
+       }
+    },
+
+    "test_10":
+    { "Strawberries":
+        {
+        "code": "SR1",
+        "price":5.00,
+        "itemsInCart": 1,
+        "itemsAdded": 1,
+        "rule": "notRuleApplied"
+       },
+      
+      "GreenTea":
+        {
+        "code":"GR1",
+        "price": 3.11,
+        "itemsInCart": 2,
+        "itemsAdded": 1,
+        "rule": "FreeRule"
+       } 
+    },
+
+    "test_11":
+    { "Strawberries":
+        {
+        "code": "SR1",
+        "pricex4items": 18.00,
+        "itemsInCart": 4,
+        "itemsAdded": 4,
+        "rule": "ReducedPriceRule"
+       },
+      
+      "GreenTea":
+        {
+        "code":"GR1",
+        "pricex4items": 6.22,
+        "itemsInCart": 4,
+        "itemsAdded": 2,
+        "rule": "FreeRule"
+       } 
+    },
+
+    "test_12":
+    { "Coffee":
+     {
+        "code":"CF1",
+        "pricex2items": 22.46,
+        "itemsInCart": 2,
+        "itemsAdded": 2,
+        "rule":"notRuleApplied"
+        },
+      "GreenTea":
+        {
+        "code":"GR1",
+        "price": 3.11,
+        "itemsInCart": 2,
+        "itemsAdded": 1,
+        "rule": "FreeRule"
+       }
+    },
+    "test_13":
+    { "Coffee":
+     {
+        "code":"CF1",
+        "itemsInCart": 3,
+        "itemsAdded": 3,
+        "pricex3items": 23.583,
+        "rule":"FractionPriceRule"
+        },
+      "GreenTea":
+        {
+        "code":"GR1",
+        "price": 3.11,
+        "itemsInCart": 2,
+        "itemsAdded": 1,
+        "rule": "FreeRule"
+       }
+    },
+
+    "test_14":
+    { "GreenTea":
+       {
+        "code":"GR1",
+        "itemsAdded": 1,
+        "itemsInCart": 2,
+        "rule": "FreeRule",
+        "price": 3.11
+       },
+
+       "Strawberries":
+       {
+        "code":"SR1",
+        "itemsAdded": 1,
+        "itemsInCart": 1,
+        "rule":"notRuleApplied",
+        "price": 5.00
+       },
+
+       "Coffee": 
+       {
+        "code": "CF1",
+        "itemsAdded": 1,
+        "itemsInCart": 1,
+        "rule":"notRuleApplied",
+        "price": 11.23
+       }
+    }, 
+
+    "test_15":
+    { "GreenTea":
+       {
+        "code":"GR1",
+        "itemsAdded": 1,
+        "itemsInCart": 2,
+        "rule": "FreeRule",
+        "price": 3.11
+       },
+
+       "Strawberries":
+       {
+        "code":"SR1",
+        "itemsAdded": 4,
+        "itemsInCart": 4,
+        "rule":"ReducedPriceRule",
+        "pricex4items": 18.00
+       },
+
+       "Coffee": 
+       {
+        "code": "CF1",
+        "itemsAdded": 3,
+        "itemsInCart": 3,
+        "rule":"FractionPriceRule",
+        "pricex3items": 23.583
+       }
+    }, 
+
+    "test_16": 
+    { "noItem":
+       {
+        "code":"",
+        "itemsAdded": 0,
+        "itemsInCart": 0,
+        "rule": "notRuleApplied",
+        "price": 0
+       }
+    },
+    
+    "test_17": 
+    {
+    "code": "EGT1",
+    "name": "Earl Grey Tea",
+    "price": 2.00,
+    "rule": "notRuleApplied",
+    "itemsAdded": 1,
+    "itemsInCart": 1
+    },
+
+    "test_18":
+    {
+        "code": "XXXX",
+        "price": 0,
+        "itemsAdded": 0,
+        "rule": "notRuleApplied",
+        "itemsInCart": 0
+    }
+
+}

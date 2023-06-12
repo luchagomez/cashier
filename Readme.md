@@ -1,8 +1,7 @@
 This repository contains the tests for the cashier funtionality.
 The tests are written in JavaScript using mocha. To run the tests, the following dependencies are required:
 1. node.js
-2. npm install --save-dev mocha
-3. npm install mocha yamljs 
+2. npm install 
 
 Please make sure these dependencies are installed before running the tests.
 
@@ -47,7 +46,7 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The freeRule should be applied. 
  - 10 items should be added to the cart.
- - The total price should be the one defined in the **products.yml** file for GR1 item multiplied by 5. 
+ - The price should be the one defined in the **products.yml** file for GR1 item multiplied by 5. 
 
 ***TEST 4***
 
@@ -55,7 +54,7 @@ The price should be the one defined in the **products.yml** file.
 
 *EXPECTED RESULT*: 
  - 3 item should be added to the cart.
- - The total price should be the one defined in the **products.yml** file for the product SR1 multiplied by 3.
+ - The  price should be the one defined in the **products.yml** file for the product SR1 multiplied by 3.
   
 ***TEST 5***
 
@@ -64,7 +63,7 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The reducePriceRule should be applied.
  - 4 SR1 items should be added to the cart.
- - The total price should be the one defined in the **rules.yml** file for the product SR1 multiplied by 4.
+ - The price should be the one defined in the **rules.yml** file for the product SR1 multiplied by 4.
 
 ***TEST 6***
 
@@ -90,7 +89,7 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The fractionPriceRule should be applied.
  - 3 CF1 items should be added to the cart.
- - The total price should be the one defined in the **rules.yml** file for the product CF1 multiplied by 3.
+ - The price should be the one defined in the **rules.yml** file for the product CF1 multiplied by 3.
 
 ***TEST 9***
 
@@ -99,7 +98,7 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The fractionPriceRule should be applied.
  - 6 items should be added to the cart.
- - The total price should be the one defined in the **rules.yml** file for the product CF1 multiplied by 6.
+ - The price should be the one defined in the **rules.yml** file for the product CF1 multiplied by 6.
 
 ***TEST 10***
 
@@ -118,9 +117,9 @@ The price should be the one defined in the **products.yml** file.
  - The freeRule should be applied for both GR1 items.
  - The reducePriceRule should be applied for SR1 items.
  - 8 items should be added to the cart (4 GR1 + 4 SR1)
- - The total price should be:
+ - The prices for each product should be:
      (SR1 price_per_product from **rules.yml**) * 4
- *+* (GR1 price from **products.yml**) * 4  
+     (GR1 price from **products.yml**) * 4  
 
 ***TEST 12***
 
@@ -129,9 +128,9 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The freeRule should be applied for both GR1 items.
  - 4 items should be added to the cart (2 GR1 + 2 CF1)
- - The total price should be:
+ - The prices for each product should be:
    (GR1 price from **products.yml**) * 1
-*+*(CF1 price from **products.yml**) * 2
+   (CF1 price from **products.yml**) * 2
 
 ***TEST 13***
 
@@ -151,10 +150,10 @@ The price should be the one defined in the **products.yml** file.
 *EXPECTED RESULT*: 
  - The freeRule should be applied for GR1 item.
  - 4 items should be added to the cart (2 GR1 + 1 SR1 + 1 CF1)
- - The total price should be:
+ - The prices for each product should be:
    (GR1 price from **products.yml**) * 1
-*+*(SR1 price from **products.yml**) * 1
-*+*(CF1 price from **products.yml**) * 1
+   (SR1 price from **products.yml**) * 1
+   (CF1 price from **products.yml**) * 1
 
 ***TEST 15***
 
@@ -164,17 +163,17 @@ The price should be the one defined in the **products.yml** file.
  - The freeRule should be applied for GR1 item.
  - The fractionPriceRule should be applied for CF1 item.
  - 11 items should be added to the cart (4 GR1 + 4 SR1 + 3 CF1)
- - The total price should be:
+ - The prices for each product should be:
    (GR1 price from **products.yml**) * 2
-*+*(SR1 price_per_product from **rules.yml**) * 4
-*+*(CF1 price from **products.yml**) * fraction_price/100 (from **rules.yml**) * 3
+   (SR1 price_per_product from **rules.yml**) * 4
+   (CF1 price from **products.yml**) * fraction_price/100 (from **rules.yml**) * 3
 
 ***TEST 16***
 
 *DESCRIPTION*: Verify the number of products, the rule applied, and total price when no items are added in the cart.
 
 *EXPECTED RESULT*:
- - Quantity and total should be 0.
+ - Quantity and price should be 0.
 
 ***TEST 17***
 
@@ -186,7 +185,7 @@ The price should be the one defined in the **products.yml** file.
 
 ***TEST 18***
 
-*DESCRIPTION*: Verify the number of products, the rule applied, and total price when there is no available information about prices for the item selected.
+*DESCRIPTION*: Verify the number of products, the applied rule, and total price when there is no available information about prices for the selected item (non-existent product).
 
 *EXPECTED RESULT*:
  - Error message "no prices for the selected item". 

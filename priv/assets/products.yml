@@ -8,3 +8,6 @@ products:
   - product_code: CF1
     name: Coffee
     price: 11.23
+  - product_code: EGT1
+    name: Earl Grey Tea
+    price: 2.00

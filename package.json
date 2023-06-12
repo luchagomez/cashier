@@ -1,0 +1,19 @@
+{
+  "type": "commonjs",
+  "name": "cashier",
+  "version": "1.0.0",
+  "description": "This repository contains the tests for the cashier funtionality. The tests are written in JavaScript using mocha. To run the tests, the following dependencies are required: 1. node.js 2. mocha yamljs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha priv/tests/cashierTest.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+     "yamljs": "^0.3.0"
+  }
+}
