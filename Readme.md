@@ -189,3 +189,37 @@ The price should be the one defined in the **products.yml** file.
 
 *EXPECTED RESULT*:
  - Error message "no prices for the selected item". 
+
+**TESTS NOT ADDED IN THE CURRENT SOLUTION (PENDING TESTS)**
+***TEST 19***
+*DESCRIPTION*:
+Verify the behavior when adding a negative number of products to the cart.
+
+*EXPECTED RESULT*:
+Confirm that the system rejects the input and displays an appropriate error message.
+
+***TEST 20***
+*DESCRIPTION*: Verify the behavior when adding a product with an invalid quantity (e.g., a string instead of a number).
+
+*EXPECTED RESULT*: 
+Ensure that the system detects this situation and displays an appropriate error message.
+
+
+***TEST 21***
+*DESCRIPTION*: Verify the behavior when modifying the discount rules in the YAML file while the system is running.
+
+*EXPECTED RESULT*: 
+Ensure that the system detects the changes in rules and applies them correctly without needing to restart the system.
+
+
+***TEST 22***
+*DESCRIPTION*: Verify the behavior when removing products from the cart.
+
+*EXPECTED RESULT*:
+Confirm that the system correctly adjusts the number of products, applied rules, and total price after removing a specific product.
+
+***TEST 23***
+*DESCRIPTION*: Verify the behavior when adding a product with more than one rule active.
+
+*EXPECTED RESULT*: 
+Confirmr that both rules should be applied.
