@@ -194,6 +194,7 @@ The price should be the one defined in the **products.yml** file.
  - Error message "no prices for the selected item". 
 
 **TESTS NOT ADDED IN THE CURRENT SOLUTION (PENDING TESTS)**
+
 ***TEST 19***
 *DESCRIPTION*:
 Verify the behavior when adding a negative number of products to the cart.
