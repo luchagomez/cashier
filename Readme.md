@@ -8,6 +8,10 @@ Please make sure these dependencies are installed before running the tests.
 **How to run the tests:**
 1. Execute npm test
 
+After running the tests you should be able to see the results as follow:
+![image](https://github.com/luchagomez/cashier/assets/16385703/e506f0b2-406d-4601-b9de-dfe9069edc41)
+
+
 **Products and rules**
 For this prototype the following products and rules are being use:
 
