@@ -1,5 +1,6 @@
 This repository contains the tests for the cashier funtionality.
-The tests are written in JavaScript using mocha. To run the tests, make sure to have installed node.js and run the following to install the ependencies required:
+The tests are written in JavaScript using mocha. To run the tests, make sure to have installed node.js and run the following to install the dependencies required:
+
 1.npm install 
 
 Please make sure these dependencies are installed before running the tests.
