@@ -150,7 +150,7 @@ const verifyPriceForTwoItemTypes = (productCode1, itemsAdded1, price1, productCo
     verifyItemsPrice(productCode2, itemsAdded2, price2);  
 }
 
-const verifyRulesApplied = (productCode1, rule1, itemsAdded1, productCode2, rule2, itemsAdded2) => {
+const verifyRuleAppliedForTwoItems = (productCode1, rule1, itemsAdded1, productCode2, rule2, itemsAdded2) => {
     verifyRuleApplied(productCode1, rule1, itemsAdded1);
     verifyRuleApplied(productCode2, rule2, itemsAdded2);  
 }
@@ -173,51 +173,15 @@ const verifyPriceForThreeItemTypes = (productCode1, itemsAdded1, price1, product
     verifyItemsPrice(productCode3, itemsAdded3, price3); 
 }
 
-const verifyEmptyCart = (productCode, itemsAdded, itemsInCart) =>{
-    verifyProductsInCart(productCode, itemsAdded, itemsInCart); 
-}
-
-const verifyPricesForEmptyCart = (productCode, itemsAdded, price) => {
-    verifyItemsPrice(productCode, itemsAdded, price);
-}
-
-const verifyNoRulesAppliedForItemsWithoutRules = (productCode, rule, itemsAdded) => {
-    verifyRuleApplied(productCode, rule, itemsAdded);
-}
-
-const verifyPriceForItemsWithoutRules = (productCode, itemsAdded, price) => {
-    verifyItemsPrice(productCode, itemsAdded, price);
-}
-
-const verifyProductsInCartForItemsWithoutRules = (productCode, itemsCart, itemsAdded) => {
-    verifyProductsInCart (productCode, itemsCart, itemsAdded);
-}
-
-const verifyPriceForNonExistentProduct = (productCode, itemsCart, itemsAdded) => {
-    verifyItemsPrice (productCode, itemsCart, itemsAdded);
-}
-
-const verifyNoRulesAppliedForNonExistentProduct = (productCode, itemsAdded, price) => {
-    verifyRuleApplied(productCode, itemsAdded, price);
-}
-
-
 module.exports = {
-    verifyIndividualProductPrices,
+    verifyIndividualProductPrices, 
     verifyProductsInCartForOneItemType,
     verifyItemsPrice,
     verifyRuleApplied,
-    verifyProductsInCartForTwoItemTypes,
-    verifyRulesApplied,
-    verifyProductsInCartForThreeItemTypes,
+    verifyProductsInCartForTwoItemTypes, 
+    verifyRuleAppliedForTwoItems,
     verifyPriceForTwoItemTypes,
+    verifyProductsInCartForThreeItemTypes,
     verifyRulesAppliedForThereeItems,
-    verifyPriceForThreeItemTypes,
-    verifyEmptyCart,
-    verifyPricesForEmptyCart,
-    verifyPriceForItemsWithoutRules,
-    verifyNoRulesAppliedForItemsWithoutRules,
-    verifyProductsInCartForItemsWithoutRules,
-    verifyPriceForNonExistentProduct,
-    verifyNoRulesAppliedForNonExistentProduct
+    verifyPriceForThreeItemTypes
 };

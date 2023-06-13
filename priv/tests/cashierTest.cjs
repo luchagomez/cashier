@@ -6,18 +6,11 @@ const { verifyIndividualProductPrices,
         verifyItemsPrice,
         verifyRuleApplied,
         verifyProductsInCartForTwoItemTypes, 
-        verifyRulesApplied,
+        verifyRuleAppliedForTwoItems,
         verifyPriceForTwoItemTypes,
         verifyProductsInCartForThreeItemTypes,
         verifyRulesAppliedForThereeItems,
         verifyPriceForThreeItemTypes,
-        verifyEmptyCart,
-        verifyPricesForEmptyCart,
-        verifyPriceForItemsWithoutRules,
-        verifyNoRulesAppliedForItemsWithoutRules,
-        verifyProductsInCartForItemsWithoutRules,
-        verifyPriceForNonExistentProduct,
-        verifyNoRulesAppliedForNonExistentProduct
       } = require('../actions/actions.js');
 
 describe('Cashier tests', () => {
@@ -96,7 +89,7 @@ it ('Verify the number of products, the rule applied, and total price in the car
   verifyProductsInCartForTwoItemTypes(data.test_10.GreenTea.code, data.test_10.GreenTea.itemsInCart, data.test_10.GreenTea.itemsAdded, 
                                       data.test_10.Strawberries.code, data.test_10.Strawberries.itemsInCart,
                                       data.test_10.Strawberries.itemsAdded);
-  verifyRulesApplied(data.test_10.GreenTea.code, data.test_10.GreenTea.rule, data.test_10.GreenTea.itemsAdded, 
+  verifyRuleAppliedForTwoItems(data.test_10.GreenTea.code, data.test_10.GreenTea.rule, data.test_10.GreenTea.itemsAdded, 
                  data.test_10.Strawberries.code, data.test_10.Strawberries.rule, data.test_10.Strawberries.itemsAdded);
   verifyPriceForTwoItemTypes(data.test_10.GreenTea.code, data.test_10.GreenTea.itemsAdded, data.test_10.GreenTea.price, 
                                 data.test_10.Strawberries.code, data.test_10.Strawberries.itemsAdded, data.test_10.Strawberries.price);
@@ -106,7 +99,7 @@ it ('Verify the number of products, the rule applied, and total price in the car
 it ('Verify the number of products, the rule applied, and total price in the cart when 2 GR1 and 4 SR1 items are added.', () => {
   verifyProductsInCartForTwoItemTypes(data.test_11.GreenTea.code, data.test_11.GreenTea.itemsInCart, data.test_11.GreenTea.itemsAdded, 
                                       data.test_11.Strawberries.code, data.test_11.Strawberries.itemsInCart, data.test_11.Strawberries.itemsAdded);
-  verifyRulesApplied(data.test_11.GreenTea.code, data.test_11.GreenTea.rule, data.test_11.GreenTea.itemsAdded, 
+  verifyRuleAppliedForTwoItems(data.test_11.GreenTea.code, data.test_11.GreenTea.rule, data.test_11.GreenTea.itemsAdded, 
                  data.test_11.Strawberries.code, data.test_11.Strawberries.rule, data.test_11.Strawberries.itemsAdded);
   verifyPriceForTwoItemTypes(data.test_11.GreenTea.code, data.test_11.GreenTea.itemsAdded, data.test_11.GreenTea.pricex4items, 
                                 data.test_11.Strawberries.code, data.test_11.Strawberries.itemsAdded, data.test_11.Strawberries.pricex4items);
@@ -116,7 +109,7 @@ it ('Verify the number of products, the rule applied, and total price in the car
 it ('Verify number of products, the rule applied, and total price in the cart when 1 GR1 and 2 CF1 items are added.', () => {
   verifyProductsInCartForTwoItemTypes(data.test_12.GreenTea.code, data.test_12.GreenTea.itemsInCart, data.test_12.GreenTea.itemsAdded, 
                                       data.test_12.Coffee.code, data.test_12.Coffee.itemsInCart, data.test_12.Coffee.itemsAdded);
-  verifyRulesApplied(data.test_12.GreenTea.code, data.test_12.GreenTea.rule, data.test_11.GreenTea.itemsAdded, 
+  verifyRuleAppliedForTwoItems(data.test_12.GreenTea.code, data.test_12.GreenTea.rule, data.test_11.GreenTea.itemsAdded, 
                  data.test_12.Coffee.code, data.test_12.Coffee.rule, data.test_12.Coffee.itemsAdded);
   verifyPriceForTwoItemTypes(data.test_12.GreenTea.code, data.test_12.GreenTea.itemsAdded, data.test_12.GreenTea.price, 
                                 data.test_12.Coffee.code, data.test_12.Coffee.itemsAdded, data.test_12.Coffee.pricex2items);
@@ -125,7 +118,7 @@ it ('Verify number of products, the rule applied, and total price in the cart wh
 it ('Verify the number of products, the rule applied, and total price in the cart when 1 GR1 and 3 CF1 items are added.', () => {
   verifyProductsInCartForTwoItemTypes(data.test_13.GreenTea.code, data.test_13.GreenTea.itemsInCart, data.test_13.GreenTea.itemsAdded, 
                                       data.test_13.Coffee.code, data.test_13.Coffee.itemsInCart, data.test_13.Coffee.itemsAdded);
-  verifyRulesApplied(data.test_13.GreenTea.code, data.test_13.GreenTea.rule, data.test_13.GreenTea.itemsAdded, 
+  verifyRuleAppliedForTwoItems(data.test_13.GreenTea.code, data.test_13.GreenTea.rule, data.test_13.GreenTea.itemsAdded, 
                  data.test_13.Coffee.code, data.test_13.Coffee.rule, data.test_13.Coffee.itemsAdded);
   verifyPriceForTwoItemTypes(data.test_13.GreenTea.code, data.test_13.GreenTea.itemsAdded, data.test_13.GreenTea.price, 
                                 data.test_13.Coffee.code, data.test_13.Coffee.itemsAdded, data.test_13.Coffee.pricex3items);
@@ -159,22 +152,22 @@ it ('Verify the number of products, the rule applied, and total price in the car
 
 ///***TEST 16***
 it ('Verify the number of products, the rule applied, and total price when no items are added in the cart.', () => {
-  verifyEmptyCart (data.test_16.noItem.code, data.test_16.noItem.itemsInCart, data.test_16.noItem.itemsAdded);
-  verifyPricesForEmptyCart (data.test_16.noItem.code, data.test_16.noItem.itemsAdded, data.test_16.noItem.price)
+  verifyProductsInCartForOneItemType (data.test_16.noItem.code, data.test_16.noItem.itemsInCart, data.test_16.noItem.itemsAdded);
+  verifyItemsPrice (data.test_16.noItem.code, data.test_16.noItem.itemsAdded, data.test_16.noItem.price)
 })
 
 ///***TEST 17***
 it ('Verify the number of products, the rule applied, and total price when an item without rule is added to the cart (EGT1).', () => {
-  verifyProductsInCartForItemsWithoutRules (data.test_17.code, data.test_17.itemsInCart, data.test_17.itemsAdded);
-  verifyNoRulesAppliedForItemsWithoutRules (data.test_17.code, data.test_17.rule, data.test_17.itemsAdded)
-  verifyPriceForItemsWithoutRules (data.test_17.code, data.test_17.itemsAdded, data.test_17.price)
+  verifyProductsInCartForOneItemType (data.test_17.code, data.test_17.itemsInCart, data.test_17.itemsAdded);
+  verifyRuleApplied (data.test_17.code, data.test_17.rule, data.test_17.itemsAdded)
+  verifyItemsPrice (data.test_17.code, data.test_17.itemsAdded, data.test_17.price)
 })
 
 ///***TEST 18***
 it ('Verify the number of products, the applied rule, and total price when there is no available information about prices for the selected item.', () => {
-  verifyEmptyCart (data.test_18.code, data.test_18.itemsInCart, data.test_18.itemsAdded);
-  verifyNoRulesAppliedForNonExistentProduct (data.test_18.code, data.test_18.rule, data.test_18.itemsAdded)
-  verifyPriceForNonExistentProduct (data.test_18.code, data.test_18.rule, data.test_18.itemsAdded)
+  verifyProductsInCartForOneItemType(data.test_18.code, data.test_18.itemsInCart, data.test_18.itemsAdded);
+  verifyRuleApplied (data.test_18.code, data.test_18.rule, data.test_18.itemsAdded)
+  verifyItemsPrice (data.test_18.code, data.test_18.rule, data.test_18.itemsAdded)
 })
 
 }); 
